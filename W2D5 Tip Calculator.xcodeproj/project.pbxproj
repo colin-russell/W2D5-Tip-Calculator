@@ -13,6 +13,7 @@
 		3B1506EE208A44D80094BBAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B1506ED208A44D80094BBAF /* Assets.xcassets */; };
 		3B1506F1208A44D80094BBAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1506EF208A44D80094BBAF /* LaunchScreen.storyboard */; };
 		3B1506F4208A44D90094BBAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1506F3208A44D90094BBAF /* main.m */; };
+		3B8113C1208A45F400F28F82 /* TipCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8113C0208A45F400F28F82 /* TipCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		3B1506F0208A44D80094BBAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B1506F2208A44D80094BBAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B1506F3208A44D90094BBAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B8113BF208A45F400F28F82 /* TipCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TipCalculator.h; sourceTree = "<group>"; };
+		3B8113C0208A45F400F28F82 /* TipCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipCalculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +61,51 @@
 		3B1506E3208A44D50094BBAF /* W2D5 Tip Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				3B1506E4208A44D50094BBAF /* AppDelegate.h */,
-				3B1506E5208A44D50094BBAF /* AppDelegate.m */,
-				3B1506E7208A44D50094BBAF /* ViewController.h */,
-				3B1506E8208A44D50094BBAF /* ViewController.m */,
-				3B1506EA208A44D50094BBAF /* Main.storyboard */,
-				3B1506ED208A44D80094BBAF /* Assets.xcassets */,
-				3B1506EF208A44D80094BBAF /* LaunchScreen.storyboard */,
-				3B1506F2208A44D80094BBAF /* Info.plist */,
-				3B1506F3208A44D90094BBAF /* main.m */,
+				3B1506FE208A455F0094BBAF /* Supporting Files */,
+				3B1506FA208A452B0094BBAF /* Model */,
+				3B1506FC208A45460094BBAF /* View */,
+				3B1506FD208A454E0094BBAF /* Controller */,
 			);
 			path = "W2D5 Tip Calculator";
+			sourceTree = "<group>";
+		};
+		3B1506FA208A452B0094BBAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B8113BF208A45F400F28F82 /* TipCalculator.h */,
+				3B8113C0208A45F400F28F82 /* TipCalculator.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3B1506FC208A45460094BBAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B1506EA208A44D50094BBAF /* Main.storyboard */,
+				3B1506EF208A44D80094BBAF /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3B1506FD208A454E0094BBAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B1506E7208A44D50094BBAF /* ViewController.h */,
+				3B1506E8208A44D50094BBAF /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3B1506FE208A455F0094BBAF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B1506F2208A44D80094BBAF /* Info.plist */,
+				3B1506F3208A44D90094BBAF /* main.m */,
+				3B1506ED208A44D80094BBAF /* Assets.xcassets */,
+				3B1506E4208A44D50094BBAF /* AppDelegate.h */,
+				3B1506E5208A44D50094BBAF /* AppDelegate.m */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B1506E9208A44D50094BBAF /* ViewController.m in Sources */,
+				3B8113C1208A45F400F28F82 /* TipCalculator.m in Sources */,
 				3B1506F4208A44D90094BBAF /* main.m in Sources */,
 				3B1506E6208A44D50094BBAF /* AppDelegate.m in Sources */,
 			);
