@@ -12,11 +12,12 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *tipAmountLabel;
 @property (weak, nonatomic) IBOutlet UITextField *tipPercentageTextField;
+
 @property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
 
 @property (nonatomic)double billAmount;
-@property (nonatomic)NSInteger tipPercentage;
-@property (nonatomic)double tipAmount;
+@property (nonatomic)double tipPercentage;
+//@property (nonatomic)double tipAmount;
 
 @end
 
@@ -25,23 +26,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    double billAmount =  [self.billAmountTextField.text doubleValue];
-    NSInteger tipPercentage = [self.tipPercentageTextField.text integerValue];
-    
-    [self calculateTipWithBillAmount:billAmount andTipPercentage:tipPercentage];
-}
-
-- (double)calculateTipWithBillAmount:(double) billAmount andTipPercentage:(NSInteger) tipPercentage{
+    self.billAmount =  0;
+    self.tipPercentage = 0.15;
     
     
-    return 0;
 }
 
-- (IBAction)billAmountButton:(UIButton *)sender {
+- (double)calculateTip{
+    return self.tipPercentage*self.billAmount;
+
 }
 
-- (IBAction)tipPercentageButton:(UIButton *)sender {
-}
 
+- (IBAction)calculateTipButton:(UIButton *)sender {
+    self.billAmount = [self.billAmountTextField.text doubleValue];
+    NSLog(@"bill amount:%f",self.billAmount);
+    
+    self.tipPercentage = [self.tipPercentageTextField.text doubleValue]/100;
+    NSLog(@"tip percentage:%f", self.tipPercentage);
+    
+    self.tipAmountLabel.text = [NSString stringWithFormat:@"$%.02f", [self calculateTip]];
+}
 
 @end
